@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MobilProgramlama</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_mainpage">MainPage</string>
+    <string-array name="decimal_conversions">
+        <item>Decimal to Binary</item>
+        <item>Decimal to Octal</item>
+        <item>Decimal to Hexadecimal</item>
+    </string-array>
+    <string-array name="byte_conversion_types">
+        <item>kilobyte</item>
+        <item>byte</item>
+        <item>kibibyte</item>
+        <item>bit</item>
+    </string-array>
+
+</resources>

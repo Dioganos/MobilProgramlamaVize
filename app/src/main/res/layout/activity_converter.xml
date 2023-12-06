@@ -1,0 +1,199 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Converter Başlık -->
+
+    <TextView
+        android:id="@+id/textViewConverterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Converter"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Decimal Dönüşümü -->
+
+    <TextView
+        android:id="@+id/textViewDecimalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Decimal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConverterTitle" />
+
+    <EditText
+        android:id="@+id/editTextDecimalInput"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginBottom="4dp"
+        android:hint="Enter Decimal Value"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toEndOf="@+id/textViewDecimalTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Spinner
+        android:id="@+id/spinnerDecimalConversion"
+        android:layout_width="255dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:entries="@array/decimal_conversions"
+        app:layout_constraintBottom_toTopOf="@id/textViewDecimalResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDecimalInput" />
+
+    <!-- Byte Dönüşümü -->
+
+    <TextView
+        android:id="@+id/textViewDecimalResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerDecimalConversion" />
+
+    <TextView
+        android:id="@+id/textViewByteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Mega Byte"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDecimalResult" />
+
+    <!-- Burada Byte dönüşümü için gerekli bileşenler gelecek -->
+
+    <!-- Celsius Dönüşümü -->
+
+    <EditText
+        android:id="@+id/inputByte"
+        android:layout_width="172dp"
+        android:layout_height="63dp"
+        android:hint="Enter Byte Value"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/textViewByteTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <Spinner
+        android:id="@+id/spinnerByte"
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/byte_conversion_types"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputByte" />
+
+    <TextView
+        android:id="@+id/resultByte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/spinnerByte"
+        app:layout_constraintTop_toBottomOf="@id/spinnerByte" />
+
+    <EditText
+        android:id="@+id/inputCelsius"
+        android:layout_width="175dp"
+        android:layout_height="66dp"
+        android:hint="Enter Celsius Value"
+        android:inputType="number|numberDecimal|numberSigned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toEndOf="@+id/textViewCelsiusTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <TextView
+        android:id="@+id/textViewCelsiusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="Celsius"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultByte" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCelsius"
+        android:layout_width="269dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputCelsius">
+
+        <RadioButton
+            android:id="@+id/radioButtonFahrenheit"
+            android:layout_width="133dp"
+            android:layout_height="50dp"
+            android:checked="true"
+            android:text="Fahrenheit" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKelvin"
+            android:layout_width="136dp"
+            android:layout_height="50dp"
+            android:text="Kelvin" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/resultCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/radioGroupCelsius"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupCelsius" />
+
+    <Button
+        android:id="@+id/returButtonC"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ana Sayfa"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Burada Celsius dönüşümü için gerekli bileşenler gelecek -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
